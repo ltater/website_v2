@@ -1,5 +1,51 @@
 <% provide(:title, "Home") %>
 
-<h1>Home Page</h1>
-<p>Content goes here</p>
-<%= link_to "Sign up to change the site's colors!", signup_path %>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3 col-md-2 sidebar">
+			<ul class="nav nav-sidebar">
+				<li class="active"><a href="#">Sign Up<span class="sr-only">(current)</span></a></li>
+				<li><a href="#">This is your personal image</a></li>
+				<li><a href="#">This is a statement about the intention of this website</a></li>
+				<li><a href="#">This is where the News or Bike Mag section goes</a></li>
+			</ul>
+		</div>
+
+		<div class="col-sm-3 col-md-2"></div> <!-- whitespace -->
+		<div class="col-sm-9 col-md-10 main">
+			<h1 class="page-header">Dashboard</h1>
+			<div class="col-sm-6 col-md-4" id="personal-projects">
+				<div class="thumbnail">
+					<p>Project 1 Screenshot</p>
+					<p>This is project 1</p>
+					<p><a href="#" class="btn btn-primary" role="button">View</a></p>
+				</div>
+				<div class="thumbnail">
+					<p>Project 2 Screenshot</p>
+					<p>This is project 2</p>
+					<p><a href="#" class="btn btn-primary" role="button">View</a></p>
+				</div>
+				<div class="thumbnail">
+					<p>Project 3 Screenshot</p>
+					<p>This is project 3</p>
+					<p><a href="#" class="btn btn-primary" role="button">View</a></p>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-8" id="resume">
+				<p>This is where the resume chart goes</p>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="col-sm-9 col-md-10" id="travel-map">
+						<p>This is where the travel map goes</p>
+					</div>
+					<div class="col-sm-3 col-md-2" id="travel-description">
+						<p>This is where the travel description goes</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
