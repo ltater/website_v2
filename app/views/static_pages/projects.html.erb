@@ -1,4 +1,39 @@
 <% provide(:title, "Projects") %>
 
-<h1>Projects Page</h1>
-<p>Content goes here</p>
+		<div class="col-sm-9 col-md-10 main">
+			<h1 class="page-header"><%= yield(:title) %></h1>
+			<div class="col-sm-6 col-md-4" id="personal-projects">
+				<div class="thumbnail">
+					<p>Project 1 Screenshot</p>
+					<p>This is project 1</p>
+					<p><a href="#" class="btn btn-primary" role="button">View</a></p>
+				</div>
+				<div class="thumbnail">
+					<p>Project 2 Screenshot</p>
+					<p>This is project 2</p>
+					<p><a href="#" class="btn btn-primary" role="button">View</a></p>
+				</div>
+				<div class="thumbnail">
+					<p>Project 3 Screenshot</p>
+					<p>This is project 3</p>
+					<p><a href="#" class="btn btn-primary" role="button">View</a></p>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-8" id="resume">
+				<p>This is where the resume chart goes</p>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="col-sm-9 col-md-10" id="travel-map">
+						<p>This is where the travel map goes</p>
+					</div>
+					<div class="col-sm-3 col-md-2" id="travel-description">
+						<p>This is where the travel description goes</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
