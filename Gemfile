@@ -7,7 +7,7 @@ gem 'rails', '4.2.4'
 #gem 'sqlite3'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+# gem 'pg'
 
 # Use Bootsrap for stylsheets
 gem 'bootstrap-sass', '~> 3.3.5'
@@ -39,8 +39,11 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 # Heroku gems
-gem 'rails_12factor', group: :production
-gem 'puma'
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+	gem 'puma'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
