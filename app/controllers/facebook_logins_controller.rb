@@ -1,0 +1,2 @@
+class FacebookLoginsController < ApplicationController
+end
