@@ -13,6 +13,16 @@
 			<%= f.submit "Log In", class: 'btn btn-primary' %>
 		<% end %>
 
+		<!-- Facebook Login:
+		  Below we include the Login Button social plugin. This button uses
+		  the JavaScript SDK to present a graphical Login button that triggers
+		  the FB.login() function when clicked. -->
+		<div id="facebook-login">
+			<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+		</div>
+
+		<div id="status"></div>
+
 		<p>New user? <%= link_to "Sign Up Now!", signup_path %></p>
 	</div>
 </div>
