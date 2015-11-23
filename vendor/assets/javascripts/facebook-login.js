@@ -9,7 +9,10 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      testAPI();
+      $('.navbar-brand').html('Welcome ' + response.name + '!');
+      $('.not-logged-in').hide();
+      $('.fb-logout').html('<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" autologoutlink="true"></fb:login-button>');
+      //testAPI();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -78,9 +81,10 @@
     });
   }
 
-  FB.logout(function(response) {
-        // Person is now logged out
-        console.log('You are now logged out.'
-        response.status === 'connected'
+  function logout() {
+    FB.logout(function(response) {
+      // user is now logged out
     });
+  }
+
 //</script>
