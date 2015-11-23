@@ -83,6 +83,7 @@
   function loggedIn() {
     console.log('loggedIn');
     FB.api('/me', function(response) {
+      var accessToken = response.authResponse.accessToken;
       console.log('FB.api loggedIn');
       $('.navbar-brand').html('Welcome ' + response.name + '!');
       $('.not-logged-in').hide();
