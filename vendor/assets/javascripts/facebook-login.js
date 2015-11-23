@@ -9,10 +9,8 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      $('.navbar-brand').html('Welcome ' + response.name + '!');
-      $('.not-logged-in').hide();
-      $('.fb-logout').html('<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" autologoutlink="true"></fb:login-button>');
       //testAPI();
+      loggedIn();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -20,6 +18,7 @@
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
+      loggedOut();
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
     }
@@ -81,9 +80,21 @@
     });
   }
 
-  function logout() {
-    FB.logout(function(response) {
-      // user is now logged out
+  function loggedIn() {
+    console.log('loggedIn');
+    FB.api('/me', function(response) {
+      console.log('FB.api loggedIn');
+      $('.navbar-brand').html('Welcome ' + response.name + '!');
+      $('.not-logged-in').hide();
+    });
+  }
+
+  function loggedOut() {
+    console.log('loggedOut');
+    FB.api('/me', function(response) {
+      console.log('FB.api loggedOut');
+      $('.navbar-brand').html('Welcome!');
+      $('.not-logged-in').show();
     });
   }
 
