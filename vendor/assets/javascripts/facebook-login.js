@@ -80,23 +80,23 @@
     });
   }
 
-  function loggedIn() {
-    console.log('loggedIn');
-    FB.api('/me', function(response) {
-      var accessToken = response.authResponse.accessToken;
-      console.log('FB.api loggedIn');
-      $('.navbar-brand').html('Welcome ' + response.name + '!');
-      $('.not-logged-in').hide();
-    });
-  }
+  // function loggedIn() {
+  //   console.log('loggedIn');
+  //   FB.api('/me', function(response) {
+  //     var accessToken = response.authResponse.accessToken;
+  //     console.log('FB.api loggedIn');
+  //     $('.navbar-brand').html('Welcome ' + response.name + '!');
+  //     $('.not-logged-in').hide();
+  //   });
+  // }
 
-  function loggedOut() {
-    console.log('loggedOut');
-    FB.api('/me', function(response) {
-      console.log('FB.api loggedOut');
-      $('.navbar-brand').html('Welcome!');
-      $('.not-logged-in').show();
-    });
-  }
+  // function loggedOut() {
+  //   console.log('loggedOut');
+  //   FB.api('/me', function(response) {
+  //     console.log('FB.api loggedOut');
+  //     $('.navbar-brand').html('Welcome!');
+  //     $('.not-logged-in').show();
+  //   });
+  // }
 
 //</script>
