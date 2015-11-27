@@ -1,70 +1,19 @@
 <% provide(:title, "Projects") %>
 
-<!-- open sidenav partial div -->
-	<!-- open sidenav partial div -->
-		<!-- open sidenav partial div -->
-			<!-- sidenav partial unordered list -->
-		<!-- close sidenav partial div -->
-	<!-- open sidenav partial div for whitespace -->
-		<!-- open sidenav partial div for main space page header -->
-			<!-- open sidenav partial h1 for main space page header -->
-				<div class="col-sm-12 col-md-12">
-					<div class="panel panel-primary">
-						<div class="panel-heading"><h4>What I like the most</h4></div>
-						<div class="panel-body">My favorite projects include those that have a high solution architecture - where components are modularized and can be snapped in and out of projects with ease. I love to focus on efficieny with a high attention to detail. I love to templatize projects as much as possible to reduce inefficiencies.</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12 col-md-12">
-						<div class="col-sm-6 col-md-6">
-							<div class="panel panel-primary">
-								<div class="panel-heading">MASH Game</div>
-								<div class="panel-body">
-									<%= image_tag("mash-app.png") %>
-									<p><span class="strong">Description:</span> This was a group project that created a computer version of the popular (with eight-year-old girls) game of MASH. MASH predicts your life for you (the house you will own, the car you will drive, and the person you will marry) all at the click of a button!</p>
-									<p><span class="strong">Technologies used:</span>
-										<ul>
-											<li>Ruby on Rails</li>
-										</ul>
-									</p>
-									<p><span class="strong">The rose, the bud, and the thorn:</span>
-										<ul>
-											<li>Rose: My favorite aspect of this project was going a little crazy with storing "lives" based on themes to pull from a database. Who wouldn't want a celebrity- or presidential-themed life?</li>
-											<li>Bud: I think it would be really fun to expand the game so your options are picked based on personality traits to prevent gaming the system to produce results in your favor.</li>
-											<li>Thorn: The timeline was short, and the aspirations were big.</li>
-										</ul>
-									<p>
-									<p><span class="strong">What I learned:</span></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6">
-							<div class="panel panel-primary">
-								<div class="panel-heading">Chat App</div>
-								<div class="panel-body">
-									<%= image_tag("chat-app.png") %>
-									<p><span class="strong">Description:</span> I built this app over the course of many 5am mornings while in class. I was just really curious how sockets worked and wanted to build something useful.</p>
-									<p><span class="strong">Technologies used:</span>
-										<ul>
-											<li>Node.js</li>
-											<li>Sockets</li>
-											<li>This very useful <a href="http://smithamilli.com/tuts/chat/part-one/" target="_blank">tutorial</a></li>
-										</ul>
-									</p>
-									<p><span class="strong">The rose, the bud, and the thorn:</span>
-										<ul>
-											<li>Rose: I remember one morning, when I was very frustrated because I couldn't get anything to work, when finally I stumbled upon a tutorial that showed me how often sockets pinged the server. That was a pretty "mind blown" moment.</li>
-											<li>Bud: I look forward to refactoring the code into a standard MVC model.</li>
-											<li>Thorn: I went through A LOT of useless tutorials before I finally found one that worked and was easy to understand.</li>
-										</ul>
-									<p>
-									<p><span class="strong">What I learned:</spans></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+<div class="row">
+	<div class="col-sm-12 col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading"><h4>What I like the most</h4></div>
+			<div class="panel-body">My favorite projects include those that have a high solution architecture - where components are modularized and can be snapped in and out of projects with ease. I love to focus on efficieny with a high attention to detail. I love to templatize projects as much as possible to reduce inefficiencies.</div>
 		</div>
-	</div> <!-- do not delete: close sidenav partial div for whitespace -->
-</div> <!-- do not delete: close sidenav partial div -->
+	</div>
+</div>
+	<div class="row">
+		<div class="col-sm-6 col-md-6">
+			<%= render 'projects/mash' %>
+		</div>
+		<div class="col-sm-6 col-md-6">
+			<%= render 'projects/chat' %>
+		</div>
+	</div>
+</div>

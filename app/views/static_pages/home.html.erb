@@ -8,21 +8,10 @@
 	<!-- open sidenav partial div for whitespace -->
 		<!-- open sidenav partial div for main space page header -->
 			<!-- open sidenav partial h1 for main space page header -->
-			<div class="col-sm-6 col-md-4" id="personal-projects">
-				<div class="thumbnail">
-					<p>MASH App</p>
-					<p>The childhood game of yore.</p>
-					<p><a href="https://github.com/atxdubya/MASH.app" class="btn btn-primary" role="button" target="_blank">View on GitHub</a></p>
-				</div>
-				<div class="thumbnail">
-					<p>Chat App</p>
-					<p>Chat with your friends!</p>
-					<p><a href="https://github.com/ltater/chat-app-v4" class="btn btn-primary" role="button" target="_blank">View on GitHub</a></p>
-				</div>
-				<div class="thumbnail">
-					<p>Tinder for Dogs</p>
-					<p>Because all creatures need love</p>
-					<p><a href="#" class="btn btn-primary" role="button" target="_blank">View on GitHub</a></p>
+			<div class="col-sm-6 col-md-6" id="personal-projects">
+				<div>
+					<%= render 'projects/mash' %>
+					<%= render 'projects/chat' %>
 				</div>
 			</div>
 
