@@ -2,9 +2,7 @@ Rails.application.routes.draw do
 
   # Static Page Routes
   root 'static_pages#home'
-  get 'projects' => 'static_pages#projects'
   get 'about' => 'static_pages#about'
-  get 'contact' => 'static_pages#contact'
 
   # User Routes
   get 'signup' => 'users#new'
@@ -14,6 +12,11 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+
+  # Project Routes
+  get 'projects' => 'projects#index'
+  get 'projects/new' => 'projects#new'
+  post 'projects' => 'projects#create'
 
   # Just for Fun Routes
   get 'travel' => 'travels#new'
