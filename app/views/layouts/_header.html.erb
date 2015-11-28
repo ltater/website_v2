@@ -9,7 +9,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<% if logged_in? %>
-					<p class="navbar-brand">Welcome, <%= @user.name %>!</p>
+					<p class="navbar-brand">Welcome, <%= @current_user.name %>!</p>
 				<% else %>
 					<p class="navbar-brand">
 						Welcome!</p>
