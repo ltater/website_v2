@@ -1,34 +1,33 @@
 <% provide(:title, "Dashboard") %>
 
-<!-- open sidenav partial div -->
-	<!-- open sidenav partial div -->
-		<!-- open sidenav partial div -->
-			<!-- sidenav partial unordered list -->
-		<!-- close sidenav partial div -->
-	<!-- open sidenav partial div for whitespace -->
-		<!-- open sidenav partial div for main space page header -->
-			<!-- open sidenav partial h1 for main space page header -->
-			<div class="col-sm-6 col-md-6" id="personal-projects">
-				<div>
-					<%= render 'projects/mash' %>
-					<%= render 'projects/chat' %>
-				</div>
-			</div>
+<%= render 'shared/about_this_page' %>
 
-			<div class="col-sm-6 col-md-8" id="resume">
-				<p>This is where the resume chart goes</p>
-			</div>
+<div class="col-sm-6 col-md-6" id="personal-projects">
+	<div>
+		<%= render 'projects/featured_projects' %>
+	</div>
+</div>
 
-			<div class="row">
-				<div class="col-sm-12 col-md-12">
-					<div class="col-sm-9 col-md-10" id="travel-map">
-						<p>This is where the travel map goes</p>
-					</div>
-					<div class="col-sm-3 col-md-2" id="travel-description">
-						<p>This is where the travel description goes</p>
-					</div>
-				</div>
-			</div>
-		</div> <!-- do not delete: closes sidenav partial div for main space header -->
-	</div> <!-- do not delete: close sidenav partial div for whitespace -->
-</div> <!-- do not delete: close sidenav partial div -->
+<div class="col-sm-6 col-md-6" id="resume">
+	<p>What do you want to know about Larissa?</p>
+	<p>Click Me for a random fact</p>
+	<p>Favorite food (click for dropdown menu)</p>
+	<p>Activities</p>
+	<p>Update the Users table to have fun facts for each person. Login can also have this</p>
+	<p>If logged in, the person will also see information about themself. If not logged in, only show Larissa's information</p>
+</div>
+
+<div class="col-sm-6 col-md-6" id="resume">
+	<p>This is where the resume chart goes</p>
+</div>
+
+<div class="row">
+	<div class="col-sm-12 col-md-12">
+		<div class="col-sm-9 col-md-10" id="travel-map">
+			<p>This is where the travel map goes</p>
+		</div>
+		<div class="col-sm-3 col-md-2" id="travel-description">
+			<p>This is where the travel description goes. The coordinates on this map need to added to a Places Traveled database.</p>
+		</div>
+	</div>
+</div>

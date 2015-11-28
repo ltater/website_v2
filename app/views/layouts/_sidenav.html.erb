@@ -5,22 +5,25 @@
 				<li><%= link_to "Dashboard", root_path %></li>
 				<li><%= link_to "About", about_path %></li>
 				<li><%= link_to "Projects", projects_path %></li>
-				<li><a href="#">Tutorials - Chat app using MVC model</a></li>
-				<li><%= link_to "Contact", contact_path %></li>
+				<li><a href="#">Coming Soon: Tutorials</a></li>
 			</ul>
 			<hr />
-			<p>Just for fun</p>
-			<ul class="nav nav-sidebar">
-				<li><a href="#">What happened today? [Title: Today's News]</a></li>
-				<li><%= link_to "Do you like to travel?", travel_path %></li>
-				<li><a href="#">Want to play a game? [Title: Play x game]</a></li>
-				<li><a href="#">Sitting at a bar? [Title: Figure out your tip]</a></li>
-			</ul>
+			<div class="panel panel-primary">
+				<div class="panel-heading">Contact Larissa</div>
+				<div class="panel-body">
+					<ul class="nav nav-sidebar">
+						<li><a href="#">user.email</a></li>
+						<li><a href="#">user.github</a></li>
+						<li><a href="#">etc.</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
-	<div class="col-sm-3 col-md-2"></div> <!-- whitespace for sidenav partial -->
-		<div class="col-sm-9 col-md-10 main">
-			<h1 class="page-header"><%= yield(:title) %></h1>
-			<%= yield %>
+		<div class="col-sm-3 col-md-2"></div> <!-- whitespace for sidenav partial -->
+			<div class="col-sm-9 col-md-10 main">
+				<h1 class="page-header"><%= yield(:title) %></h1>
+				<%= yield %>
+			</div>
 		</div>
 	</div>
 </div>
