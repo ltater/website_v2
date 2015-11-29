@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+
 	attr_accessor :name, :image, :description, :comment, :technology
 
 	def index

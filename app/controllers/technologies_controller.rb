@@ -1,4 +1,5 @@
 class TechnologiesController < ApplicationController
+
 	attr_accessor :name, :experience
 
 	def index
