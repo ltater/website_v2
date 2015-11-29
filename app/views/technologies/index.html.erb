@@ -1,0 +1,16 @@
+<% provide(:title, "Technologies") %>
+<% provide(:page_description, "This is the page description") %>
+
+<%= render 'shared/about_this_page' %>
+
+<% @technologies.each do |technology| %>
+<div class="col-sm-6 col-md-6">
+	<div class="panel panel-primary">
+		<div class="panel-heading"><%= technology.name %></div>
+		<div class="panel-body">
+			<p><strong>Technology Name:</strong> <%= technology.name %></p>
+			<p><strong>Experience:</strong> <%= technology.experience %></p>
+		</div>
+	</div>
+</div>
+<% end %>

@@ -18,6 +18,11 @@ Rails.application.routes.draw do
   get 'projects/new' => 'projects#new'
   post 'projects' => 'projects#create'
 
+  # Technology Routes
+  get 'technologies' => 'technologies#index'
+  get 'technologies/new' => 'technologies#new'
+  post 'technologies' => 'technologies#create'
+
   # Just for Fun Routes
   get 'travel' => 'travels#new'
 

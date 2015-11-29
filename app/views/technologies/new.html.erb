@@ -1,1 +1,17 @@
-new.html.erb
+<% provide(:title, 'New Technology') %>
+
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
+		<%= form_for @technology do |f| %>
+			
+			<%= f.label :name %>
+			<%= f.text_field :name, class: 'form-control' %>
+
+			<%= f.label :experience %>
+			<%= f.number_field :experience, class: 'form-control' %>
+
+			<%= f.submit "Add New Technology", class: "btn btn-primary" %>
+
+		<% end %>
+	</div>
+</div>
