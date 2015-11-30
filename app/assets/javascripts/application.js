@@ -13,7 +13,15 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require facebook-login
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+
+$(function() {
+	var username = "larissa.tater";
+	var hostname = "gmail.com";
+	var linktext = username + "@" + hostname;
+	$(".home-email").append("<a href='" + "mail" + "to:" + username + "@" + hostname + "'><strong>Email: </strong>" + linktext + "</a></li>");
+	console.log("ready");
+});
