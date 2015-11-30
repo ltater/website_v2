@@ -3,27 +3,16 @@
 
 <%= render 'shared/about_this_page' %>
 
-<div class="col-sm-6 col-md-6" id="personal-projects">
-	<div>
+	<div class="col-sm-6 col-md-6" id="personal-projects">
 		<%= render 'projects/featured_projects' %>
 	</div>
-</div>
 
-<div class="col-sm-6 col-md-6" id="about-me">
-	<%= render 'users/fun_facts' %>
-</div>
-
-<div class="col-sm-6 col-md-6" id="resume">
-	<p>This is where the resume chart goes</p>
-</div>
-
-<div class="row">
-	<div class="col-sm-12 col-md-12">
-		<div class="col-sm-9 col-md-10" id="travel-map">
-			<p>This is where the travel map goes</p>
-		</div>
-		<div class="col-sm-3 col-md-2" id="travel-description">
-			<p>This is where the travel description goes. The coordinates on this map need to added to a Places Traveled database.</p>
-		</div>
+	<div class="col-sm-6 col-md-6" id="about-me">
+		<%= render 'users/fun_facts' %>
 	</div>
-</div>
+
+	<div class="col-sm-12 col-md-12">
+		<%= render 'users/googlemap' %>
+	</div>
+
+

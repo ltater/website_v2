@@ -13,6 +13,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require googlemap
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
@@ -36,7 +37,7 @@ $(function() {
 	"I bought my first truck with pig money. My brother impaled it with the forklift on the tractor (not his best day).",
 	"In college, I wanted to be a sports writer and wrote for the Universtity of Texas at Austin Athletics department. One of my stories was picked up by ESPN!",
 	"I've been an avid reader my whole life. I also love to cook and quilt. I enjoy talking to strangers.",
-	"I didn't grow up with television or good music, so your pop culture references are lost on me. My friends have me on the 'Tater Improvement Plan' to help make up for lost time. It's not going well, as I still don't watch much TV (but I do like good music)."
+	"I didn't grow up with television or good music, so your pop culture references are lost on me. My friends have me on the 'Tater Improvement Plan' to help make up for lost time."
 	];
 
 	function funFacts() {
