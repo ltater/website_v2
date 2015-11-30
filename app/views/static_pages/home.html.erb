@@ -1,33 +1,18 @@
 <% provide(:title, "Dashboard") %>
+<% provide(:page_description, "Eventually, this page will be 100% dynamically populated via a database. As of now, it is a combination of partial views and JavaScript.") %>
 
 <%= render 'shared/about_this_page' %>
 
-<div class="col-sm-6 col-md-6" id="personal-projects">
-	<div>
+	<div class="col-sm-6 col-md-6" id="personal-projects">
 		<%= render 'projects/featured_projects' %>
 	</div>
-</div>
 
-<div class="col-sm-6 col-md-6" id="resume">
-	<p>What do you want to know about Larissa?</p>
-	<p>Click Me for a random fact</p>
-	<p>Favorite food (click for dropdown menu)</p>
-	<p>Activities</p>
-	<p>Update the Users table to have fun facts for each person. Login can also have this</p>
-	<p>If logged in, the person will also see information about themself. If not logged in, only show Larissa's information</p>
-</div>
-
-<div class="col-sm-6 col-md-6" id="resume">
-	<p>This is where the resume chart goes</p>
-</div>
-
-<div class="row">
-	<div class="col-sm-12 col-md-12">
-		<div class="col-sm-9 col-md-10" id="travel-map">
-			<p>This is where the travel map goes</p>
-		</div>
-		<div class="col-sm-3 col-md-2" id="travel-description">
-			<p>This is where the travel description goes. The coordinates on this map need to added to a Places Traveled database.</p>
-		</div>
+	<div class="col-sm-6 col-md-6" id="about-me">
+		<%= render 'users/fun_facts' %>
 	</div>
-</div>
+
+	<div class="col-sm-12 col-md-12">
+		<%= render 'users/googlemap' %>
+	</div>
+
+
