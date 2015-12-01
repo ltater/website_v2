@@ -1,3 +1,9 @@
 <% provide(:title, "My Account") %>
 
-<h4><%= @user.name %>, thank you for logging in and visiting my site! Do you want to change the colors? I have the following color schemes.</h4>
+<h4><%= @user.name %>, thank you for logging in and visiting my site! Signing in doesn't do anything for you right now, other than change your name in the navbar! Sorry to disappoint you!</h4>
+
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
+		<%= image_tag("sorry.jpg") %>
+	</div>
+</div>
