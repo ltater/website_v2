@@ -1,0 +1,30 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3 col-md-2 sidebar">
+			<ul class="nav nav-sidebar">
+				<li><%= link_to "Dashboard", root_path %></li>
+				<li><%= link_to "About", about_path %></li>
+				<li><%= link_to "Projects", projects_path %></li>
+				<li><a href="#">Coming Soon: Tutorials</a></li>
+			</ul>
+			<hr />
+			<div class="panel panel-primary">
+				<div class="panel-heading">Contact Larissa</div>
+				<div class="panel-body">
+					<ul class="nav nav-sidebar">
+						<p>Did my email disappear? Please refresh the page.</p>
+						<li class="home-email"></li>
+						<li><a href="http://www.github.com/ltater" target="_blank"><strong>GitHub:</strong> github.com/ltater</a></li>
+						<li><a href="http://www.linkedin.com/in/ltater" target="_blank"><strong>LinkedIn:</strong> linkedin.com/in/ltater</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3 col-md-2"></div> <!-- whitespace for sidenav partial -->
+			<div class="col-sm-9 col-md-10 main">
+				<h1 class="page-header"><%= yield(:title) %></h1>
+				<%= yield %>
+			</div>
+		</div>
+	</div>
+</div>

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # Static Page Routes
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
+  get 'nate' => 'static_pages#nate'
 
   # User Routes
   get 'signup' => 'users#new'
