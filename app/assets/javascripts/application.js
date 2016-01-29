@@ -19,6 +19,11 @@
 
 
 $(function() {
+
+	// Begin Bootstrap Components
+	$('.dropdown-toggle').dropdown();
+	// End Bootstrap Components
+
 	var username = "larissa.tater";
 	var hostname = "gmail.com";
 	var linktext = username + "@" + hostname;

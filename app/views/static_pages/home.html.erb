@@ -1,18 +1,117 @@
-<% provide(:title, "Dashboard") %>
-<% provide(:page_description, "Eventually, this page will be 100% dynamically populated via a database. As of now, it is a combination of partial views and JavaScript. The idea behind this page (and website) was to create a reporting tool, with a reporting dashboard with an analytics style. I still have some work to do.") %>
+<% provide(:title, "Home") %>
 
-<%= render 'shared/about_this_page' %>
-
-	<div class="col-sm-6 col-md-6" id="personal-projects">
-		<%= render 'projects/featured_projects' %>
+<!-- Begin Hero -->
+<div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12 hero">
+		<div class="col-sm-5 col-md-5 col-lg-5 hero-hi">
+			hi.
+		</div>
+		<div class="col-sm-7 col-md-7 col-lg-7 hero-credentials">
+			<div class="row" id="hero-name">
+				<div class="col-sm-12 col-md-12 col-lg-12">
+					Larissa Tater
+				</div>
+			</div>
+			<div class="row" id="hero-title">
+				<div class="col-sm-12 col-md-12 col-lg-12">
+					software developer
+				</div>
+			</div>
+		</div>
 	</div>
+</div>
+<!-- End Hero -->
 
-	<div class="col-sm-6 col-md-6" id="about-me">
-		<%= render 'users/fun_facts' %>
+<!-- Begin About -->
+<div class="row">
+	<div class="col-sm-2 col-md-2 col-lg-2">
+		<h1>Interests</h1>
 	</div>
-
-	<div class="col-sm-12 col-md-12">
-		<%= render 'users/googlemap' %>
+	<div class="col-sm-10 col-md-10 col-lg-10">
+		Pictures
 	</div>
+</div>
 
-
+<div class="row">
+	<div class="col-sm-2 col-md-2 col-lg-2">
+		<h1>Resume</h1>
+	</div>
+	<div class="col-sm-10 col-md-10 col-lg-10">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+					<div class="row">
+						<div class="job main-job">
+							<h1>Independent Contractor</h1>
+							<h3>Software Developer & Communications Specialist</h3>
+							<p>Software Developer: Design and build front- and back-end web applications to client specifications, as well as consult on scalable database solutions.</p>
+							<p>Communications Manager: Led communication with the FDA and Texas Animal Health Commission to support funding for fever tick drug testing in cattle.</p>
+							<p>Grant Writer: Obtained $88,000 in federal grants and $3,600 in state grants.</p>
+							<p>Copywriter: Head copywriter for a Fortune 15 company and other clients.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="job job-align-bottom">
+							<h1>General Assembly</h1>
+							<h3>Web Development Immersive Student</h3>
+							<p>Expanded upon knowledge of front- and back-end languages and corresponding technologies and methodologies.</p>
+						</div>
+						<div class="job job-align-bottom">
+							<h1>Sprinklr</h1>
+							<h3>Enablement Consultant</h3>
+							<p>Owned client relationships through the implementation process. Designed software user experiences to scale. Managed timelines and expectations.</p>
+						</div>
+						<div class="job job-align-bottom">
+							<h1>The Woodhouse Day Spa</h1>
+							<h3>Social Media & Content Strategist</h3>
+							<p>Consultant for 40+ franchise partners with a focus on digital marketing and social analytics. Provided strategic consultation based on data analysis.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="job job-align-top">
+							<h1>Blackbaud</h1>
+							<h4>(formerly Convio)</h4>
+							<h3>Web Development Immersive Student</h3>
+							<p>Designed strategic plans for cultivation, acquisition, and digital marketing programs backed by data analysis and testing, as well as trained clients.</p>
+						</div>
+						<div class="job job-align-top">
+							<h1>Charity Dynamics</h1>
+							<h3>Project Implementation Specialist</h3>
+							<p>Managed accounts and upsell opportunities. Troubleshot support issues, built front-end systems, and coordinated internal team deliverables.</p>
+						</div>
+						<div class="job job-align-top education">
+							<h1>Education</h1>
+							<h3>The University of Texas at Austin</h3>
+							<p>Bachelor of Journalism</p>
+							<h3>General Assembly</h3>
+							<p>Web Development Immersive</p>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12 job skills">
+				<h1 id="skills-header">Programming Skills</h1>
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						<%= image_tag("resume/html5.png", class: "resume-lang") %>
+						<%= image_tag("resume/css3.png", class: "resume-lang") %>
+						<%= image_tag("resume/javascript.png", class: "resume-lang") %>
+						<%= image_tag("resume/jquery.gif", class: "resume-lang") %>
+						<%= image_tag("resume/json.png", class: "resume-lang") %>
+						<%= image_tag("resume/ajax.png", class: "resume-lang") %>
+						<%= image_tag("resume/ruby-rails.png", class: "resume-lang") %>
+						<%= image_tag("resume/postgresql.png", class: "resume-lang") %>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						<%= image_tag("resume/mongodb.png", class: "resume-lang-long") %>
+						<%= image_tag("resume/heroku.png", class: "resume-lang-long") %>
+						<%= image_tag("resume/amazon-web-services", class: "resume-lang-long") %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End About -->
