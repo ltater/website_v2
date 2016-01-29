@@ -22,13 +22,27 @@
 	box-sizing: border-box;
 }
 
+body {
+	color: #3a4b5a;
+}
+
 .container {
 	width: 75%;
 	margin: 0 auto;
 }
 
+.wrapper {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.center {
+	text-align: center;
+}
+
 .hero {
 	background-color: #4DBD33;
+	margin-bottom: 30px;
 }
 
 .hero-hi {
@@ -53,96 +67,69 @@
 	text-transform: lowercase;
 }
 
-.job-container {
+.interest-image {
 	width: 100%;
+	border: 1px solid #3a4b5a;
 }
 
-.all-jobs {
+.about-me {
+	background-color: #3a4b5a;
+	color: #FFFFFF;
+	padding: 50px;
+}
+
+.about-me-copy {
+	width: 80%;
 	margin: 0 auto;
 }
 
-.job {
-	margin: 10px;
-	padding: 10px;
-	color: #FFFFFF;
+.about-me p {
+	font-size: 1.5em;
 }
 
 .main-job {
 	background-color: #abaeb3;
 	color: #FFFFFF;
+	padding: 10px;
+	margin-top:15px;
 }
 
-.job-align-bottom {
-	vertical-align: bottom;
+.job {
 	background-color: #699abc;
-}
-
-.job-align-top {
-	vertical-align: top;
-	background-color: #699abc;
+	color: #FFFFFF;
+	padding: 10px;
+	margin-top: 20px;
 }
 
 .education {
 	background-color: #3ca380;
+	color: #FFFFFF;
+	padding: 10px;
+	margin-top:15px;
 }
 
-.skills {
+.resume-skills {
+	color: #FFFFFF;
 	background-color: #3a4b5a;
+	padding: 10px;
 	text-align: center;
 }
 
 #skills-header {
 	text-align: left;
+	padding-bottom: 10px;
 }
-
 .resume-lang {
+	margin: 5px;
 	width: 10%;
 	height: 150px;
-	margin: 5px;
 }
 
 .resume-lang-long {
 	width: 30%;
 	height: 150px;
-	margin: 5px;
 }
 
-.page-header {
-    padding-bottom: 9px;
-    margin: 0 0 20px;
-    border-bottom: 1px solid #eeeeee;
-}
-
-.about-bold {
-	font-weight: bold; 
-	font-size: 1.2em;
-}
-
-#map {
-	width: 100%;
-    height: 500px;
-}
-
-.hero-background {
-	position: relative;
-	width: 100%;
-}
-
-.hero-image {
-	opacity: 0.7;
-}
-
-.hero-copy {
-	position: absolute;
-	width: 100%;
-	top: 450px;
-	text-align: center;
-}
-
-.hero-copy h1 {
-	font-size: 100px;
-	color: #000000;
-}
 
 .fb-page {
 	text-align: center;
