@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   # Static Page Routes
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
+
+  # Live Features
+  get 'live_features/nyt' => 'live_features#nyt'
   get 'nate' => 'static_pages#nate'
 
   # User Routes
