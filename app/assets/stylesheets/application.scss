@@ -45,6 +45,11 @@ body {
 	margin-bottom: 30px;
 }
 
+.hero-wrapper {
+	width: 70%;
+	margin: 0 auto;
+}
+
 .hero-hi {
 	line-height: 100%;
 	font-size: 30em;
@@ -70,6 +75,7 @@ body {
 .interest-image {
 	width: 100%;
 	border: 1px solid #3a4b5a;
+	margin: 10px;
 }
 
 .about-me {
@@ -130,6 +136,37 @@ body {
 	height: 150px;
 }
 
+.project-img-right {
+	width: 50%;
+	float: right;
+	margin-left: 10px;
+}
+
+.project-img-div-left {
+	width: 50%;
+	float: left;
+	padding-right: 10px;
+	display: inline-block;
+}
+
+.project-img-left {
+	width: 100%;
+}
+
+.about-project-right {
+	float: right;
+	display: inline-block;
+	width: 50%;
+}
+
+.contact {
+	text-align: center;
+}
+
+.social-icon {
+	width: 5%;
+	margin: 10px;
+}
 
 .fb-page {
 	text-align: center;

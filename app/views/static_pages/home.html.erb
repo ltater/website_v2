@@ -1,8 +1,8 @@
 <% provide(:title, "Home") %>
 
-<div class="container"> <!-- Begin Container -->
-	<div class="row"> <!-- Begin Hero -->
-		<div class="col-sm-12 col-md-12 col-lg-12 hero">
+<div class="row wrapper"><!-- Begin Hero -->
+	<div class="col-sm-12 col-md-12 col-lg-12 hero">
+		<div class="hero-wrapper">
 			<div class="col-sm-5 col-md-5 col-lg-5 hero-hi">
 				hi.
 			</div>
@@ -19,8 +19,10 @@
 				</div>
 			</div>
 		</div>
-	</div> <!-- End Hero -->
+	</div>
+</div> <!-- End Hero -->
 
+<div class="container">
 	<div class="row"> <!-- Begin About -->
 		<div class="col-sm-12 col-md-12 col-lg-12">
 			<div class="col-sm-2 col-md-2 col-lg-2">
@@ -29,16 +31,30 @@
 			<div class="col-sm-10 col-md-10 col-lg-10">
 				<div class="row">
 					<div class="col-md-3">
-						<%= image_tag("interests/new-zealand.jpg", class: "interest-image") %>
+						<%= image_tag("interests/mtb.jpg", class: "interest-image") %>
 					</div>
 					<div class="col-md-3">
 						<%= image_tag("interests/istanbul.jpg", class: "interest-image") %>
 					</div>
 					<div class="col-md-3">
-						<%= image_tag("interests/lucy-mtb.jpg", class: "interest-image") %>
+						<%= image_tag("interests/new-zealand.jpg", class: "interest-image") %>
 					</div>
 					<div class="col-md-3">
-						<%= image_tag("interests/singing.jpg", class: "interest-image") %>
+						<%= image_tag("interests/verona.jpg", class: "interest-image") %>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<%= image_tag("interests/longhorns.jpg", class: "interest-image") %>
+					</div>
+					<div class="col-md-3">
+						<%= image_tag("interests/softball.jpg", class: "interest-image") %>
+					</div>
+					<div class="col-md-3">
+						<%= image_tag("interests/lucy.jpg", class: "interest-image") %>
+					</div>
+					<div class="col-md-3">
+						<%= image_tag("interests/wesley.jpg", class: "interest-image") %>
 					</div>
 				</div>
 			</div>
@@ -49,15 +65,11 @@
 <div class="row wrapper"> <!-- Begin About: Blurb -->
 	<div class="col-sm-12 col-md-12 col-lg-12 about-me">
 		<div class="about-me-copy">
-			<h1>Hi, I'm Larissa.</h1>
-			<h3>A few things about me:</h3>
-			<p>I love to travel (who doesn't), but I especially love solo-travel. It's the best way to immerse yourself in the culture, and you learn so much about yourself and the people around you!</p>
-			<p>I'm very active and love being outdoors. My pit-mix, Lucy, constantly keeps me on my toes. I also race mountain bikes and play softball. I enjoy hiking, camping, gardening, rolling in the grass... Really, anything outdoors: I'll be there.</p>
-			<p>I am 100% down to embarrass myself.</p>
-			<hr />
 			<div class="center">
-				<h1>I'm currently looking for a software development position in Austin, Texas.</h1>
-				<p>I'm a junior developer, but I'm a fast learner and conspicuously curious.</p>
+				<h1>Hi. I'm Larissa.</h1>
+				<hr />
+				<h2>Are you looking for someone who can code and is great with clients?</h2>
+				<h2>Look no further.</h2>
 			</div>
 		</div>
 	</div>
@@ -161,8 +173,97 @@
 					</div>
 				</div>
 			</div>
-		</div> 
-	</div> <!-- End Resume -->
+		</div> <!-- End Resume -->
+	</div> <!-- Close Row Wrapper -->
 </div> <!-- Close Container -->
 
-<!--  -->
+<div class="row wrapper"> <!-- Begin About: Blurb -->
+	<div class="col-sm-12 col-md-12 col-lg-12 about-me">
+		<div class="contact">
+			<h2>Want to learn more?</h2>
+			<%= link_to image_tag("social/email.png", class: "social-icon"), "mailto:larissa.tater@gmail.com" %>
+			<%= link_to image_tag("social/linkedin.png", class: "social-icon"), "https://www.linkedin.com/in/ltater", target: "_blank" %>
+			<%= link_to image_tag("social/github.png", class: "social-icon"), "https://www.github.com/ltater", target: "_blank" %>
+			<%= link_to image_tag("social/twitter.png", class: "social-icon"), "https://www.twitter.com/ltater", target: "_blank" %>
+		</div>
+	</div>
+</div> <!-- End About: Blurb -->
+
+<div class="container"> <!-- Begin Projects -->
+	<div class="row wrapper">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="col-sm-2 col-md-2 col-lg-2">
+				<h1>Projects</h1>
+			</div>
+			<div class="col-sm-10 col-md-10 col-lg-10">
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12 main-job">
+						<h1>TimeSwappers: Phase 1</h1>
+						<hr />
+						<%= image_tag("project/timeswappers.png", class: "project-img-right") %>
+						<p>TimeSwappers allows members to trade services for time, rather than money. Members browse ways to "spend" their time, as well as ways to "earn" more time. Members interact and close deals through the site and later rate and review the services once they are complete.</p>
+						<p><strong>Phase 1</strong> included building a prototype for users to test the TimeSwapping idea. In order for users to have a full understanding of how TimeSwappers works, I fully fleshed out the user flow to include browsing services, entering into contracts, and filling out reviews.</p>
+						<p>The app is not currently backed by a database; however, all design and flow is crafted with the database in mind.</p>
+						<h4>Technology and Methodologies</h4>
+						<ul>
+							<li>HTML + CSS</li>
+							<li>Ruby on Rails</li>
+							<li>Consulted with UX team on functionality</li>
+							<li>Conceptualized, designed, and wireframed the transactional user flow around database architecture and concerns</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12 main-job">
+						<h1>M.A.S.H.</h1>
+						<hr />
+						<div class="project-img-div-left">
+							<%= image_tag("project/mash-app.png", class: "project-img-left") %>
+						</div>
+						<div class='about-project-right'>
+							<h4>About M.A.S.H.</h4>
+							<p>M.A.S.H. is the childhood game of chance that chooses your adult life for you.</p>
+							<p>The app was completed with several of my General Assembly classmates as our first Ruby on Rails application.</p>
+							<h4>Technology and Methodologies</h4>
+							<ul>
+								<li>HTML + CSS</li>
+								<li>Ruby on Rails</li>
+								<li>PostgreSQL</li>
+								<li>Daily Agile scrums</li>
+								<li>Git and GitHub as a group</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12 main-job">
+						<h1>Chat App</h1>
+						<hr />
+						<%= image_tag("project/chat-app.png", class: "project-img-right") %>
+						<div class="about-project-left">
+							<h4>About the Chat App</h4>
+							<p>This chat app is like any other ordinary chat app. I wanted to learn more about Sockets, so I woke up at 5am, before class, every morning until I figured it out.</p>
+							<h4>Technology and Methodologies</h4>
+							<ul>
+								<li>Node.js</li>
+								<li>Sockets</li>
+								<li>jQuery</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- End Projects -->
+	</div> <!-- Close Row Wrapper -->
+</div> <!-- Close Container -->
+
+<div class="row wrapper"> <!-- Begin About: Blurb -->
+	<div class="col-sm-12 col-md-12 col-lg-12 about-me">
+		<div class="contact">
+			<%= link_to image_tag("social/email.png", class: "social-icon"), "mailto:larissa.tater@gmail.com" %>
+			<%= link_to image_tag("social/linkedin.png", class: "social-icon"), "https://www.linkedin.com/in/ltater", target: "_blank" %>
+			<%= link_to image_tag("social/github.png", class: "social-icon"), "https://www.github.com/ltater", target: "_blank" %>
+			<%= link_to image_tag("social/twitter.png", class: "social-icon"), "https://www.twitter.com/ltater", target: "_blank" %>
+		</div>
+	</div>
+</div> <!-- End About: Blurb -->
