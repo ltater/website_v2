@@ -1,26 +1,30 @@
 <% provide(:title, "Home") %>
 
-<div class="row wrapper"><!-- Begin Hero -->
-	<div class="col-sm-12 col-md-12 col-lg-12 hero">
+<!-- <div class="row"> --><!-- Begin Hero -->
+	<div class="hero">
 		<div class="hero-wrapper">
-			<div class="col-sm-5 col-md-5 col-lg-5 hero-hi">
-				hi.
-			</div>
-			<div class="col-sm-7 col-md-7 col-lg-7 hero-credentials">
-				<div class="row" id="hero-name">
-					<div class="col-sm-12 col-md-12 col-lg-12">
-						Larissa Tater
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-5 col-md-5 col-lg-5 hero-hi">
+						hi.
 					</div>
-				</div>
-				<div class="row" id="hero-title">
-					<div class="col-sm-12 col-md-12 col-lg-12">
-						software developer
+					<div class="col-sm-7 col-md-7 col-lg-7 hero-credentials">
+						<div class="row" id="hero-name">
+							<div class="col-sm-12 col-md-12 col-lg-12">
+								Larissa Tater
+							</div>
+						</div>
+						<div class="row" id="hero-title">
+							<div class="col-sm-12 col-md-12 col-lg-12">
+								software developer
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div> <!-- End Hero -->
+<!-- </div>  --><!-- End Hero -->
 
 <div class="container">
 	<div class="row"> <!-- Begin About -->
@@ -62,14 +66,18 @@
 	</div> <!-- End About -->
 </div> <!-- Close container -->
 
-<div class="row wrapper"> <!-- Begin About: Blurb -->
-	<div class="col-sm-12 col-md-12 col-lg-12 about-me">
-		<div class="about-me-copy">
-			<div class="center">
-				<h1>Hi. I'm Larissa.</h1>
-				<hr />
-				<h2>Are you looking for someone who can code and is great with clients?</h2>
-				<h2>Look no further.</h2>
+<div class="wrapper"> <!-- Begin About: Blurb -->
+	<div class="about-me">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<div class="about-me-copy">
+					<div class="center">
+						<h1>Hi. I'm Larissa.</h1>
+						<hr />
+						<h2>Are you looking for someone who can code and is great with clients?</h2>
+						<h2>Look no further.</h2>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -177,13 +185,17 @@
 	</div> <!-- Close Row Wrapper -->
 </div> <!-- Close Container -->
 
-<div class="row wrapper"> <!-- Begin About: Blurb -->
-	<div class="col-sm-12 col-md-12 col-lg-12 about-me">
-		<div class="contact">
-			<h2>Want to learn more?</h2>
-			<%= link_to image_tag("social/email.png", class: "social-icon"), "mailto:larissa.tater@gmail.com" %>
-			<%= link_to image_tag("social/linkedin.png", class: "social-icon"), "https://www.linkedin.com/in/ltater", target: "_blank" %>
-			<%= link_to image_tag("social/github.png", class: "social-icon"), "https://www.github.com/ltater", target: "_blank" %>
+<div class="wrapper"> <!-- Begin About: Blurb -->
+	<div class="about-me">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<div class="contact">
+					<h2>Want to learn more?</h2>
+					<%= link_to image_tag("social/email.png", class: "social-icon"), "mailto:larissa.tater@gmail.com" %>
+					<%= link_to image_tag("social/linkedin.png", class: "social-icon"), "https://www.linkedin.com/in/ltater", target: "_blank" %>
+					<%= link_to image_tag("social/github.png", class: "social-icon"), "https://www.github.com/ltater", target: "_blank" %>
+				</div>
+			</div>
 		</div>
 	</div>
 </div> <!-- End About: Blurb -->
@@ -256,12 +268,16 @@
 	</div> <!-- Close Row Wrapper -->
 </div> <!-- Close Container -->
 
-<div class="row wrapper"> <!-- Begin About: Blurb -->
-	<div class="col-sm-12 col-md-12 col-lg-12 about-me">
-		<div class="contact">
-			<%= link_to image_tag("social/email.png", class: "social-icon"), "mailto:larissa.tater@gmail.com" %>
-			<%= link_to image_tag("social/linkedin.png", class: "social-icon"), "https://www.linkedin.com/in/ltater", target: "_blank" %>
-			<%= link_to image_tag("social/github.png", class: "social-icon"), "https://www.github.com/ltater", target: "_blank" %>
+<div class="wrapper"> <!-- Begin About: Blurb -->
+	<div class="about-me">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<div class="contact">
+					<%= link_to image_tag("social/email.png", class: "social-icon"), "mailto:larissa.tater@gmail.com" %>
+					<%= link_to image_tag("social/linkedin.png", class: "social-icon"), "https://www.linkedin.com/in/ltater", target: "_blank" %>
+					<%= link_to image_tag("social/github.png", class: "social-icon"), "https://www.github.com/ltater", target: "_blank" %>
+				</div>
+			</div>
 		</div>
 	</div>
 </div> <!-- End About: Blurb -->
