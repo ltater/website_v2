@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   # Live Features
   get 'live_features/nyt' => 'live_features#nyt'
+  get 'live_features/notes' => 'live_features#notes'
   get 'nate' => 'static_pages#nate'
 
   # User Routes
