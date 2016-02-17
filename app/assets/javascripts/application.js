@@ -14,7 +14,6 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require bootstrap
-//= require turbolinks
 //= require_tree .
 
 
@@ -25,16 +24,7 @@ $(function() {
 // End Bootstrap Components
 
 // Nate's Journey
-	var nate = (function(d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0];
 
-	if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=828450210587169";
-		fjs.parentNode.insertBefore(js, fjs);
-	}
-
-	(document, 'script', 'facebook-jssdk'));
 // End Nate's Journey
 
 });
