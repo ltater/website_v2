@@ -32,6 +32,21 @@ $(function() {
 	console.log("ready");
 // End Present Email Address
 
+// Begin Tableau API
+	var vizDiv = document.getElementById('viz');
+	var vizURL = 'https://public.tableau.com/views/RestaurantScoresinAustinTexas/RestaurantYearlyAverageScore?:embed=y&:display_count=yes&:showTabs=y';
+	var options = {
+		width: '600px',
+		height: '540px',
+		hideToolbar: true,
+		hideTabs: true,
+		onFirstInteractive: function() {
+			workbook = viz.getWorkbook();
+		}
+	};
+	viz = new tableauSoftware.Viz(vizDiv,vizURL, options);
+// End Tableau API
+
 
 	var seenFactsArray = [];
 	var funFactsArray = [

@@ -5,4 +5,7 @@ class LiveFeaturesController < ApplicationController
 
 	def notes
 	end
+
+	def tableau
+	end
 end
