@@ -29,7 +29,7 @@ $(function() {
 
 	function initializeViz() {
 		var placeholderDiv = document.getElementById("tableauViz");
-		var url = "http://public.tableau.com/views/RestaurantScoresinAustinTexas/RestaurantYearlyAverageScore";
+		var url = "https://public.tableau.com/views/RestaurantScoresinAustinTexas/RestaurantYearlyAverageScore";
 		var options = {
 		    width: '100%',
 		    height: '600px',
@@ -44,7 +44,7 @@ $(function() {
   		viz = new tableau.Viz(placeholderDiv, url, options);
   		console.log(viz);
 	}
-	
+
 	initializeViz();
 // End Tableau API
 
