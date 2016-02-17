@@ -18,16 +18,40 @@
 
 
 $(function() {
+	console.log("ready");
 
 // Begin Bootstrap Components
 	$('.dropdown-toggle').dropdown();
 // End Bootstrap Components
 
-// Nate's Journey
+// Begin Tableau API
+	var viz, workbook, activeSheet;
 
-// End Nate's Journey
+	function initializeViz() {
+		var placeholderDiv = document.getElementById("tableauViz");
+		var url = "http://public.tableau.com/views/RestaurantScoresinAustinTexas/RestaurantYearlyAverageScore";
+		var options = {
+		    width: '100%',
+		    height: '600px',
+		    hideTabs: true,
+		    hideToolbar: true,
+		    onFirstInteractive: function () {
+		    	workbook = viz.getWorkbook();
+		    	activeSheet = workbook.getActiveSheet();
+		    	console.log("firstInteractive");
+		    }
+		};
+  		viz = new tableau.Viz(placeholderDiv, url, options);
+  		console.log(viz);
+	}
+	
+	initializeViz();
+// End Tableau API
 
 });
+
+// Begin Tableau API
+
 
 // NYT API
 	// var articles;

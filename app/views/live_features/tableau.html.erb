@@ -1,17 +1,23 @@
 <div class="container">
 	<div class="row"> <!-- Begin About -->
 		<div class="col-md-12">
-			<h1>Tableau API Project</h1>
-			<p>Disclaimer: This view is presented using a script tag. Proper API functionality coming soon.</p>
-			<h2>To Use the Graph</h2>
+			<h1>Tableau API: Austin Restaurant Inspection Scores</h1>
+			<h3>About This Page</h3>
+				<ul>
+					<li>Data Source: <%= link_to "data.austin.gov Restaurant Scores", "https://data.austintexas.gov/dataset/Restaurant-Inspection-Scores/ecmv-9xxi" %></li>
+					<li>After downloading the data, I prepared it for import into Tableau by modifying the address string using LEFT, RIGHT, MID, and SEARCH functions in Excel. This allowed me to separate the address and coordinates of the restaurants.</li>
+				</ul>
+			<h3>To Use this Chart</h3>
 			<ol>
-				<li>Filter by zip code</li>
-				<li>Filter by restaurant</li>
-				<li>You may drill down into the year to view quarterly and monthly data by click on the year, then clicking the plus (+) sign (drill down). This is best after you have filtered by zip code and/or restaurant.</li>
+				<li>Filter by zip code by clicking the magnifying glass in the zip code filter and typing in the appropriate zip code number.</li>
+				<li>Filter by restaurant by clicking the magnifying glass in the restaurant filter and typing in the appropriate name.</li>
+				<li>Other filters: You may also filter by year or use the sliding bar to filter by inspection score.</li>
+				<li>If applicable: drill down into the year to view quarterly and monthly data by clicking on the year, then clicking the plus (+) sign (drill down). Viewing this granularity is best after filtering by either resaurant or zip code.</li>
+
 			</ol>
-			<div class='tableauPlaceholder' style='width: 982px; height: 742px;'><noscript><a href='#'><img alt='Restaurant Yearly Average Score ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RestaurantScoresinAustinTexas&#47;RestaurantYearlyAverageScore&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='982' height='742' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='RestaurantScoresinAustinTexas&#47;RestaurantYearlyAverageScore' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RestaurantScoresinAustinTexas&#47;RestaurantYearlyAverageScore&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+			<div id='tableauViz'></div>
 		</div>
 	</div>
 </div>
 
-<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+
