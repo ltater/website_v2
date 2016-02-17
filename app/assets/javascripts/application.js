@@ -32,22 +32,6 @@ $(function() {
 	console.log("ready");
 // End Present Email Address
 
-// Begin Tableau API
-	var vizDiv = document.getElementById('viz');
-	var vizURL = 'https://public.tableau.com/views/RestaurantScoresinAustinTexas/RestaurantYearlyAverageScore?:embed=y&:display_count=yes&:showTabs=y';
-	var options = {
-		width: '600px',
-		height: '540px',
-		hideToolbar: true,
-		hideTabs: true,
-		onFirstInteractive: function() {
-			workbook = viz.getWorkbook();
-		}
-	};
-	viz = new tableauSoftware.Viz(vizDiv,vizURL, options);
-// End Tableau API
-
-
 	var seenFactsArray = [];
 	var funFactsArray = [
 	"I race mountain bikes. I've been the State Champ in my division twice!",
@@ -83,20 +67,22 @@ $(function() {
 
 	$("#fun-facts").on("click", funFacts);
 
-});
-
 // Nate's Journey
-var nate = (function(d, s, id) {
+	var nate = (function(d, s, id) {
 	var js, fjs = d.getElementsByTagName(s)[0];
-	
+
 	if (d.getElementById(id)) return;
 		js = d.createElement(s); js.id = id;
 		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=828450210587169";
 		fjs.parentNode.insertBefore(js, fjs);
 	}
 
-(document, 'script', 'facebook-jssdk'));
+	(document, 'script', 'facebook-jssdk'));
 // End Nate's Journey
+
+});
+
+
 
 // NYT API
 	// var articles;
