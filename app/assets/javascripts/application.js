@@ -45,7 +45,10 @@ $(function() {
   		console.log(viz);
 	}
 
-	initializeViz();
+	// Prevents the Tableau Viz from appearing at the bottom of every page!
+	if($("#tableauViz").length) {
+		initializeViz();
+	}
 // End Tableau API
 
 });
