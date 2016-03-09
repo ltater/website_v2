@@ -3,7 +3,51 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12 col-md-12 col-lg-12">
+			<h1>New York Times API: Top Stories</h1>
 			<div class="homeArticlesData"></div>
 		</div>
 	</div>
 </div>
+
+<script>
+// NYT API
+	var articles;
+	var nytk = "a69aed50284cd3aad7fbf1599e3f1614:8:68128413";
+
+	$.ajax({
+		url: "http://api.nytimes.com/svc/topstories/v1/home.json?api-key=" + nytk,
+		dataType: "json",
+		method: "GET",
+		async: false,
+		success: function(data, textStatus, jqXHR) {
+			articles = data.results;
+		}
+	});
+
+	// Go into the array of objects
+	// In each object, find the title, published date, section, subsection, and url
+	// Add each of these to a variable create a new array of objects
+	var homeArticles = [];
+
+	function getHomeArticles(articles) {
+
+		for (var i=0; i < articles.length; i++) {
+			homeArticles.push({
+				title: articles[i].title,
+				published_date: articles[i].published_date,
+				section: articles[i].section,
+				subsection: articles[i].subsection,
+				url: articles[i].url,
+			});
+		}
+	}
+
+	getHomeArticles(articles);
+
+	// For each object in the homeArticles array
+	// Display the data in the div homeArticlesData
+	$(".homeArticlesData").html(homeArticles.map(function(value) {
+		return('<div id="nyt-articles"><span class="title">' + value.title + '</span><br /><span class="published-date">' + value.published_date + '</span><br /><span class="section">' + value.section + '</span><br /><span class="subsection">' + value.subsection + '</span><br /><span class="url"> <a href="' + value.url + '">' + value.url + '</a></span><br /></div>');
+	}).join(""));
+// End NYT API
+</script>
