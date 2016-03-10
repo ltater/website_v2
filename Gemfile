@@ -12,8 +12,6 @@ gem 'rails', '4.2.4'
 # Facebook Login
 gem 'omniauth-facebook'
 
-gem 'httparty'
-
 # Use Bootsrap for stylsheets
 gem 'bootstrap-sass', '~> 3.3.5'
 # Use SCSS for stylesheets
