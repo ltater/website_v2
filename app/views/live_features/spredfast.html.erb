@@ -50,15 +50,18 @@ $(function() {
 				}
 				console.log(streamData);
 
-				for (var i = 0; i < streamData.length; i++) {
+				$('.stream-content').html(streamData.map(function(value) {
 					var output;
-					output = '<p>Created At Date: ' + streamData[i].createdAt + '</p>';
-					output = output + '<p>Name: ' + streamData[i].userName + '</p>';
-					output = output + '<p>Handle: @' + streamData[i].screenName + '</p>';
+					output = '<p>Created At Date: ' + value.createdAt + '</p>';
+					output = output + '<img src=' + value.profileImage + '/>';
+					output = output + '<p>Name: ' + value.userName + '</p>';
+					output = output + '<p>Handle: @' + value.screenName + '</p>';
+					output = output + '<p>' + value.text + '</p>'
+					output = output + '<hr />';
 					console.log(output);
-				}
 
-				$('.stream-content').html(output);
+					return output;
+				}).join(""));
 			}
 		});
 	}); // end load stream on-click
