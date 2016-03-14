@@ -8,4 +8,8 @@ class LiveFeaturesController < ApplicationController
 
 	def tableau
 	end
+
+	def spredfast
+	end
+	
 end

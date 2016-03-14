@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   get 'live_features/nyt' => 'live_features#nyt'
   get 'live_features/notes' => 'live_features#notes'
   get 'live_features/tableau' => 'live_features#tableau'
+  get 'live_features/spredfast' => 'live_features#spredfast'
   get 'nate' => 'static_pages#nate'
-
 
   # User Routes
   get 'signup' => 'users#new'
