@@ -1,10 +1,35 @@
 <% provide(:title, "Spredfast API") %>
 
+<style>
+	.profile-image {
+		top-margin: 20px;
+	}
+
+	.user-name {
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 18px;
+		color: #292f33;
+	}
+
+	.user-screen-name {
+		font-size: 14px;
+		line-height: 18px;
+		color: grey;
+		font-weight: normal;
+	}
+
+	.content-text {
+		font-size: 14px;
+		line-height: 18px;
+		color: #292f33;
+	}
+</style>
+
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12 col-md-12 col-lg-12">
 			<h1>Spredfast API: Some Fun!</h1>
-			<div class="homeArticlesData"></div>
 		</div>
 	</div>
 
@@ -12,8 +37,12 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="header"><h2>My Stream</h2></div>
-			<button id="load-stream">Load My Stream</button>
-			<input type="text" name="search" id="search" placeholder="Search"> 
+			<div class="stream-tools">
+				<button id="load-stream">Load My Stream</button>
+				<input type="text" name="search" id="search" placeholder="Search One Keyword">
+				<button id="submit-search">Submit Search</button>
+				<button id="reverse">Reverse Order</button>
+			</div>
 			<div class="stream-content"></div> <!-- Close stream content -->
 		</div> <!-- Close column -->
 	</div> <!-- Close row -->
@@ -47,24 +76,61 @@ $(function() {
 						userName: data[i].user.name,
 						screenName: data[i].user.screen_name
 					});
-				}
-				console.log(streamData);
+				} // end for loop
+				// console.log(streamData);
+				output(streamData);
 
-				$('.stream-content').html(streamData.map(function(value) {
+				function output(data) {
+					$('.stream-content').html(data.map(function(value) {
 					var output;
-					output = '<p>Created At Date: ' + value.createdAt + '</p>';
-					output = output + '<img src=' + value.profileImage + '/>';
-					output = output + '<p>Name: ' + value.userName + '</p>';
-					output = output + '<p>Handle: @' + value.screenName + '</p>';
-					output = output + '<p>' + value.text + '</p>'
+					output = "<div class='profile-image'><img src=" + value.profileImage + "/></div>";
+					output = output + "<div class='user-name'>" + value.userName + "<span class='user-screen-name'>   @" + value.screenName + "   5h</div>";
+					output = output + "<div class='content-text'>" + value.text + "</div>";
+					output = output + "<div class='created-at'>" + value.createdAt + "</div>";
 					output = output + '<hr />';
-					console.log(output);
+					// console.log(output);
 
 					return output;
-				}).join(""));
-			}
-		});
+					}).join("")); // end stream-content jquery
+				}
+				
+				$('#reverse').on('click', function() {
+					streamData.reverse();
+					output(streamData);
+				}); // end reverse order
+
+				// Keyword search functionality
+				$('#submit-search').on('click', function() {
+					var keyword = $('#search').val();
+
+					if (keyword[0] == '#') {
+						keyword = keyword.replace('#', '%23');
+					}
+					
+					var searchURI = jsonURI + "?keywords=" + keyword;
+					var searchStreamData = [];
+
+					console.log(searchURI);
+					console.log(searchStreamData);
+						
+					requestJSON(searchURI, function(data) {
+						for (var i = 0; i < data.length; i++) {
+							searchStreamData.push({
+								createdAt: data[i].created_at,
+								text: data[i].text,
+								profileImage: data[i].user.profile_image_url,
+								userName: data[i].user.name,
+								screenName: data[i].user.screen_name
+							});
+						}
+						console.log(searchStreamData);
+						output(searchStreamData);
+					});
+				}); // End keyword search functionality
+			} // end if statement
+		}); // end requestJSON()
 	}); // end load stream on-click
+	
 
 	// generic JSON request
 	function requestJSON(url, callback) {
